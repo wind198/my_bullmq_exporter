@@ -99,7 +99,7 @@ export class PrometheusMetricsCollector {
 
   async discoverAllQueues() {
     const keyPattern = new RegExp(
-      `^${this.bullmqOpts.prefix}:([^:]+):(id|failed|active|waiting|stalled-check)$`
+      `^${this.bullmqOpts.prefix}:([^:]+):([^:]+)$`
     );
     const keyStream = await this.defaultRedisClient.scanStream({
       match: `${this.bullmqOpts.prefix}:*:*`,

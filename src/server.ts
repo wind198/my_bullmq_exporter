@@ -23,7 +23,7 @@ if (tlsEnabled) {
   port = +(process.env.HTTPS_PORT || 8443);
 } else {
   server = http.createServer(app);
-  port = +(process.env.HTTP_PORT || 8080);
+  port = +(process.env.HTTP_PORT || 8081);
 }
 handleShutdown(server);
 

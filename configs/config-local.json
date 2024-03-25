@@ -1,8 +1,8 @@
 {
   "redis": {
     "host": "localhost:6379/",
-    "username": "default",
-    "password": "redispw",
+    "username": "",
+    "password": "",
     "ssl": false
   },
   "cookieSecret": "myCookieSecret123!",
