@@ -90,7 +90,7 @@ export class PrometheusMetricsCollector {
       waitDuration: new prom_client.Histogram({
         name: `${prefix}bullmq_wait_duration`,
         help: "Wait time for completed jobs (created until processing)",
-        buckets: [5, 50, 100, 250, 500, 750, 1000, 2500, 5000, 10000],
+        buckets: [5000, 10000, 20000, 50000],
         labelNames: ["queue"],
       }),
       completedDuration: new prom_client.Histogram({
